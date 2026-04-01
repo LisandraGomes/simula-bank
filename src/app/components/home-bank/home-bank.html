@@ -1,0 +1,41 @@
+<!-- adicionar o cabeçalho para sinalizar o usuário e permitir que ele faça o logoff -->
+
+<mat-card class="home-card">
+  <mat-card-header>
+    <mat-card-title>Bem-vindo ao Simula Bank</mat-card-title>
+    <mat-card-subtitle>Gerencie seus objetivos financeiros de forma fácil e eficiente</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>Aqui você pode criar, acompanhar e alcançar seus objetivos financeiros com a ajuda de nossas ferramentas intuitivas e personalizadas.</p>
+    <p>Explore as caixinhas do Simula Bank e comece a planejar seu futuro financeiro hoje mesmo!</p>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="caixinhas-card">
+  <mat-card-header>
+    <mat-card-title>Minhas Caixinhas</mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <div class="container-caixinhas">
+      @for (caixinha of listCaixinhas; track caixinha) {
+   <mat-card class="caixinha-card" loading="isLoading" >
+        <mat-card-header>
+          <mat-card-title>Caixinha: {{ caixinha.nome }}</mat-card-title>
+          <mat-card-subtitle>Meta: R$ {{ caixinha.valorMeta | currency:'BRL' }}</mat-card-subtitle>
+        </mat-card-header>
+      </mat-card>
+      } @empty {
+        
+    <p>Ainda não há caixinhas criadas. Crie sua primeira caixinha para começar a economizar!</p>
+      }
+    </div>
+    
+      <mat-card class="criar-caixinha-card" >
+        <mat-card-header>
+          <mat-card-title> Criar Caixinha </mat-card-title>
+        </mat-card-header>
+      </mat-card>
+  </mat-card-content>
+</mat-card>

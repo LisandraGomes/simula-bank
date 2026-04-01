@@ -1,0 +1,65 @@
+<div class="registerUser-container">
+  <div class="registerUser-card">
+    <div class="registerUser-header">
+      <img class="registerUser-logo" src="https://ezpwiba.stripocdn.email/content/guids/CABINET_167198e43a75a17fecce46fedce7a4f5e2c11cfe2ba36813b3ece3281207dae5/images/sbsf.png" alt="Logo do Simula Bank">
+      <h2>Bem-vindo</h2>
+      <p>Crie sua conta para continuar</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="registerUser-form">
+      <div class="input-group">
+        <label for="name">Nome</label> 
+        <input formControlName="name" type="text" id="name" placeholder="Seu nome" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="midName">Sobrenome</label> 
+        <input formControlName="midName" type="text" id="midName" placeholder="Seu sobrenome" required>
+      </div>
+
+      <div class="input-group">
+        <label for="birthDate">Data Nascimento</label> 
+        <input formControlName="birthDate" type="date" [max]="dataNascimentoMaxima" [min]="dataNascimentoMinima" id="birthDate" placeholder="dd/mm/aaaa" required>
+      </div>
+
+      <div class="input-group">
+        <label for="email">E-mail</label> 
+        <input formControlName="email" type="email" id="email" placeholder="exemplo@email.com" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="cpf">CPF</label>
+        <input formControlName="cpf" type="text" id="cpf" placeholder="000.000.000-00" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <div class="input-wrapper">
+        <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" id="password" placeholder="••••••••" required>
+        <mat-icon class="toggle-password" (click)="exibirSenha()">
+          {{ hidePassword ? 'visibility' : 'visibility_off' }}
+        </mat-icon>
+        </div>
+      </div>
+
+    <div class="input-group">
+          <label for="passwordConfirm">Confirmar Senha</label>
+          <div class="input-wrapper">
+          <input formControlName="passwordConfirm" [type]="hideConfirmPassword ? 'password' : 'text'" id="passwordConfirm" placeholder="••••••••" required>
+          <mat-icon class="toggle-password" (click)="exibirConfirmPassword()">
+            {{ hideConfirmPassword ? 'visibility' : 'visibility_off' }}
+          </mat-icon>
+    </div>
+
+      </div>
+      <mat-error class="error-message">
+          {{ error }}
+        </mat-error>
+      <button type="submit" class="btn-registerUser">Cadastre-se</button>
+
+      <div class="registerUser-footer">
+        <span>Já possui conta? <a href="">Entrar</a></span>
+      </div>
+    </form>
+  </div>
+</div>

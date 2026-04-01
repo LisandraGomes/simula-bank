@@ -1,0 +1,29 @@
+<div class="active-account-container">
+  <img src="https://ezpwiba.stripocdn.email/content/guids/CABINET_167198e43a75a17fecce46fedce7a4f5e2c11cfe2ba36813b3ece3281207dae5/images/sbsf.png" 
+       alt="Logo Simula Bank" 
+       class="active-logo">
+
+  <mat-card class="active-account-card">
+    @if(userActive){
+    <mat-card-header>
+      <mat-card-title>Conta Ativada</mat-card-title>
+      <mat-card-subtitle>Sua conta está pronta para uso.</mat-card-subtitle>
+    </mat-card-header>
+    
+    <mat-card-content>
+      <p>Parabéns! Sua conta foi ativada com sucesso. Agora você pode acessar o Simula Bank.</p>
+      
+      <div class="btn-div-active">
+      <button mat-raised-button color="primary" class="btn-activate" (click)="GoToLogin()">
+        Ir Para Login
+      </button></div>
+    </mat-card-content> 
+  }
+  @else {
+    <div class="loading-shade">
+      <mat-spinner></mat-spinner>
+      <p>Ativando sua conta...</p>
+    </div>
+    }
+  </mat-card>
+</div>

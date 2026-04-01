@@ -1,0 +1,78 @@
+:host {
+  background-image: none !important;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.home-card{
+    width: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: 7%;
+    margin-bottom: 1%;
+}
+
+/* Card Externo (O que segura tudo) */
+.caixinhas-card {
+  margin: 0 7% 7% 7%; /* Margens: topo direita baixo esquerda */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* O "Varal" que alinha as caixinhas */
+.container-caixinhas {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;     /* Permite quebrar linha se a tela for pequena */
+  gap: 10px;           /* Espaço entre elas */
+  margin-top: 10px;
+  justify-content: flex-start;
+}
+
+/* Os cards pequenos (Caixinhas) */
+.caixinha-card {
+  background-color: #0fcd97;
+  color: white;        /* Ajuste para o texto aparecer no fundo vermelho */
+  padding: 10px;
+  border-radius: 8px;
+  
+  /* Faz crescer para ocupar o máximo de espaço (1) mas respeita o limite (400px) */
+flex: 0 0 300px;
+  min-width: 250px;    
+  max-width: 400px; 
+}
+
+/* Ajuste para o texto do subtítulo do Material dentro do card vermelho */
+.caixinha-card mat-card-subtitle {
+  color: #f0f0f0;
+}
+
+.criar-caixinha-card {
+  background-color: #0fcd97;
+  margin-top: 10%;
+  color: white;
+  padding: 0.10%;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    flex-direction: column;   /* Mantém os itens em coluna */
+    text-align: center;
+  flex: 0 0 100px;
+  :hover {
+    color: rgba(233, 251, 35, 0.717);
+  }
+  font-size: large; 
+}    

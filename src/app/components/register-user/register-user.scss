@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #3832a9;
+  --primary-hover: #4338ca;
+  --bg-color: #f3f4f6;
+  --text-main: #3272ca;
+  --text-muted: #6b7280;
+  --white: #c14f4f;
+  --border-color: #d1d5db;
+}
+
+.registerUser-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  padding: 20px;
+}
+
+.registerUser-card {
+  border:rgb(14, 126, 255) solid 1px;
+  background-color: rgb(255, 255, 255);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.registerUser-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.registerUser-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.registerUser-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+}
+
+.forgot-password {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.btn-registerUser {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(14, 255, 195);
+  color: rgba(3, 3, 3, 0.893);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-registerUser:hover {
+  background-color: rgba(14, 255, 195, 0.417);
+}
+
+.registerUser-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.registerUser-footer a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px;
+  padding-right: 40px; /* Abre espaço para o ícone no final */
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* O ícone flutuando dentro do input */
+.toggle-password {
+  position: absolute;
+  right: 12px; /* Distância da borda direita */
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 20px; /* Tamanho menor para a "caixinha" */
+  width: 20px;
+  height: 20px;
+  user-select: none; /* Evita selecionar o texto do ícone ao clicar rápido */
+}
+
+.toggle-password:hover {
+  color: #4f46e5; /* Cor de destaque ao passar o mouse */
+}
+
+.error-message {
+  white-space: pre-line;
+  color: rgb(210, 39, 39);
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
+.registerUser-logo{
+  width: 15%;
+  height: 15%;
+  margin-bottom: auto;
+}

@@ -1,0 +1,48 @@
+<div class="login-container">
+  <div class="login-card">
+    <div class="login-header">
+      <img class="login-logo" src="https://ezpwiba.stripocdn.email/content/guids/CABINET_167198e43a75a17fecce46fedce7a4f5e2c11cfe2ba36813b3ece3281207dae5/images/sbsf.png" alt="Logo do Simula Bank">
+      <h2>Bem-vindo</h2> 
+      <p>Acesse sua conta para continuar</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="login-form">
+      <div class="input-group">
+        <label for="email">Login</label>
+        <input formControlName="login" type="login" id="login" placeholder="000.000.000-00" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Senha</label>
+        <div class="input-wrapper">
+        <input formControlName="password" [type]="hidePassword ? 'password' : 'text'" id="password" placeholder="••••••••" required>
+        <mat-icon class="toggle-password" (click)="exibirSenha()">
+          {{ hidePassword ? 'visibility' : 'visibility_off' }}
+        </mat-icon>
+         </div>
+         <mat-error class="error-message">
+          {{ error }}
+        </mat-error>
+      </div>
+
+      <div class="form-options">
+        <label class="remember-me">
+          <input type="checkbox"> Lembrar de mim
+        </label>
+        <a href="forgotPassword" class="forgot-password">Esqueceu a senha?</a>
+      </div>
+
+      <button type="submit" class="btn-login" [disabled]="isLoading">
+        @if (isLoading) {
+            Entrando...
+          } @else {
+            Entrar
+          }
+      </button>
+
+      <div class="login-footer">
+        <span>Não tem uma conta? <a href="registerUser">Cadastre-se</a></span>
+      </div>
+    </form>
+  </div>
+</div>

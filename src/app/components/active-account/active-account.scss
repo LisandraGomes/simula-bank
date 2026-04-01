@@ -1,0 +1,53 @@
+.active-account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2%;
+}
+.active-logo{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.active-account-card {    
+    border: 1px solid rgb(14, 126, 255);
+    background-color: #ffffff;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    min-height: 20%;
+    min-width: 40%;
+    display: flex;
+}
+.btn-div-active{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.btn-activate {
+    background-color: rgb(14, 255, 195);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.loading-shade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  height: 80%;
+  gap: 20px;
+}
